@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hw.mapper.HeartMapper">
+   
+   <resultMap type="heart" id="heartResult">
+      <result column="hidx" property="hidx"/>
+      <result column="pidx" property="pidx"/>
+      <result column="uidx" property="uidx"/>
+   </resultMap>
+   
+   <select id="select" parameterType="String" resultMap="heartResult">
+      SELECT * FROM HEART WHERE hidx=#{obj} 
+   </select>
+   
+   <select id="selectif" parameterType="heart" resultType="heart">
+      SELECT * FROM HEART WHERE uidx=#{uidx}
+   </select>
+   
+   <select id="selectall" resultType="heart">
+      SELECT * FROM HEART
+   </select>
+   
+   <insert id="insert" parameterType="heart">
+      INSERT INTO HEART VALUES (hidxseq.nextval,#{uidx},#{pidx})
+   </insert>
+   
+   <update id="update" parameterType="heart">
+      UPDATE HEART SET pidx=#{pidx},uidx=#{uidx} WHERE hidx=#{hidx} <!-- 사용안함 스펙 사정상 존재 -->
+   </update>
+   
+   <delete id="delete" parameterType="String">
+      DELETE FROM HEART WHERE hidx=#{obj}
+   </delete>  
+</mapper>
+
+
+
+
+

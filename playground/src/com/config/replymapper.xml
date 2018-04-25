@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hw.mapper.ReplyMapper">
+   <resultMap type="reply" id="replyResult">
+      <result column="ridx" property="ridx"/>   
+      <result column="pidx" property="pidx"/>
+      <result column="uidx" property="uidx"/>
+      <result column="dt" property="dt"/>
+      <result column="reply" property="reply"/>
+   </resultMap>
+   
+   <insert id="insert" parameterType="reply">
+      INSERT INTO REPLY VALUES (ridxseq.nextval,#{pidx},#{uidx},sysdate,#{reply})
+   </insert>
+ 
+   <select id="select" parameterType="String" resultMap="replyResult">
+      SELECT * FROM REPLY WHERE ridx=#{obj}
+   </select>
+   
+   <select id="selectif" parameterType="reply" resultType="reply">
+      SELECT * FROM REPLY WHERE pidx=#{pidx}
+   </select>
+   
+   <select id="selectall" resultType="reply">
+      SELECT * FROM REPLY
+   </select>
+   
+   <update id="update" parameterType="reply">
+      UPDATE REPLY SET dt=#{dt},reply=#{reply} WHERE ridx=#{ridx}
+   </update>
+   
+   <delete id="delete" parameterType="String">
+      DELETE FROM REPLY WHERE ridx=#{ridx}
+   </delete>
+
+</mapper>
+
