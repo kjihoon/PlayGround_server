@@ -101,5 +101,22 @@
 <script>
 
 
+<<<<<<< HEAD
+=======
+/* $(document).ready(function(){  
+	
+	$.ajax({
+		url:'yw.do',
+		success:function(data){
+			alert(data)
+		},
+		error:function(){
+			alert("fail")
+		}		
+	}); 
+	
+}); */
+
+>>>>>>> 474dc5e7526474220ab7d49608c5ae51e7c919e2
 </script>
 </html>

@@ -14,6 +14,23 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
 </style>
 <body class="w3-theme-l5">
 
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+
+>>>>>>> 474dc5e7526474220ab7d49608c5ae51e7c919e2
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
@@ -64,7 +81,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
       <br>
       
       <!-- Accordion -->
+<<<<<<< HEAD
       <div class="w3-card w3-round">
+=======
+   <!--    <div class="w3-card w3-round">
+>>>>>>> 474dc5e7526474220ab7d49608c5ae51e7c919e2
         <div class="w3-white">
           <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
           <div id="Demo1" class="w3-hide w3-container">
@@ -101,7 +122,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
         </div>      
       </div>
       <br>
+<<<<<<< HEAD
       
+=======
+       -->
+>>>>>>> 474dc5e7526474220ab7d49608c5ae51e7c919e2
       <!-- Interests --> 
       <div class="w3-card w3-round w3-white w3-hide-small">
         <div class="w3-container">
@@ -142,9 +167,28 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
+<<<<<<< HEAD
               <h6 class="w3-opacity">Social Media template by w3.css</h6>
               <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
               <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+=======
+              <h5 class="w3-opacity">Leave Behind Your Memory</h5>
+               
+               <form method="post" action="../registerContents.do" enctype="multipart/form-data">
+                 <input type="text" id="cmt" name="cmt" class="w3-border w3-padding" placeholder="Leave Behind Your Memory">
+                 <input type="hidden" id="uidx" name="uidx" value="5">
+			     <input type="hidden" id="lat" name="lat" value="37.78">
+			     <input type="hidden" id="lon" name="lon" value="127.12">             	
+             	<input type="file" name="img" id="img">
+             	<!--  <p contenteditable="true" class="w3-border w3-padding">Leave Behind Your Memory</p> -->
+             	 <br><input type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i>Post</button> 
+               </form>
+              
+        
+              
+              
+              
+>>>>>>> 474dc5e7526474220ab7d49608c5ae51e7c919e2
             </div>
           </div>
         </div>
@@ -192,6 +236,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
       
     <!-- End Middle Column -->
     </div>
+<<<<<<< HEAD
     
     <!-- Right Column -->
     <div class="w3-col m2">
@@ -235,6 +280,51 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
     <!-- End Right Column -->
     </div>
     
+=======
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p>
+          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Friend Request</p>
+          <img src="/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
+          <span>Jane Doe</span>
+          <div class="w3-row w3-opacity">
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <p>ADS</p>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+        <p><i class="fa fa-bug w3-xxlarge"></i></p>
+      </div>
+      
+    <!-- End Right Column -->
+    </div>
+    
+>>>>>>> 474dc5e7526474220ab7d49608c5ae51e7c919e2
   <!-- End Grid -->
   </div>
   
@@ -277,4 +367,8 @@ function openNav() {
 </script>
 
 </body>
+<<<<<<< HEAD
 </html> 
+=======
+</html> 
+>>>>>>> 474dc5e7526474220ab7d49608c5ae51e7c919e2
