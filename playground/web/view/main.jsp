@@ -104,7 +104,7 @@
 <script>
 
 
-$(document).ready(function(){  
+/* $(document).ready(function(){  
 	
 	$.ajax({
 		url:'yw.do',
@@ -116,7 +116,7 @@ $(document).ready(function(){
 		}		
 	}); 
 	
-});
+}); */
 
 </script>
 </html>

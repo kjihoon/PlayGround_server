@@ -47,7 +47,7 @@
  	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
  		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
  		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
- 		<property name="username" value="playground"/>	<!-- 오라클 유저네임에 따라 달라짐 -->
+ 		<property name="username" value="RUSER"/>	<!-- 오라클 유저네임에 따라 달라짐 -->
  		<property name="password" value="111111"/>
  	</bean>
 

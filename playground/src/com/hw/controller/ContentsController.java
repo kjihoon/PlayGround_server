@@ -113,7 +113,7 @@ public class ContentsController {
 			contents.setPidx(filename);
 			biz.register(contents);		
 			System.out.println(contents.toString());
-			String filePath = "C:\\Users\\wlwl0\\Desktop\\mv\\web\\img\\";
+			String filePath = "C:\\Users\\student\\git\\PlayGround_server\\playground\\web\\img\\";
 			String fullPath = filePath + filename +".jpg"; 
 			
 			
