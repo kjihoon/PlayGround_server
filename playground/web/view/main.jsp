@@ -16,9 +16,6 @@
 </head>
 <body>
 
-<h1>${yh }</h1>
-
-
 <form action="login.do" method="post">
 	email<input type="text" id="email" name="email"><br>
 	pwd<input type="text" id="pwd" name="pwd"><br>
@@ -103,20 +100,6 @@
 
 <script>
 
-
-$(document).ready(function(){  
-	
-	$.ajax({
-		url:'yw.do',
-		success:function(data){
-			alert(data)
-		},
-		error:function(){
-			alert("fail")
-		}		
-	}); 
-	
-});
 
 </script>
 </html>

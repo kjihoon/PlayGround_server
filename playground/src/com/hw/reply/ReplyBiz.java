@@ -20,9 +20,9 @@ public class ReplyBiz implements Biz<Reply, String> {
 		dao = new ReplyDao();
 	}
 	
-	@Transactional	// 이거때문에 롤백 가능
+	@Transactional	
 	@Override
-	public void register(Reply t) {	// 두개(주문내역, 배송내역)를 해주는 이유는 하나가 실패하면 하나는 자동으로 rollback 됨
+	public void register(Reply t) {	
 		dao.insert(t);
 	}
 	@Transactional

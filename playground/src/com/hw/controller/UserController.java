@@ -1,18 +1,16 @@
 package com.hw.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
+import javax.inject.Qualifier;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hw.frame.Biz;
@@ -21,6 +19,9 @@ import com.hw.vo.User;
 
 @Controller
 public class UserController {
+
+	
+	
 	
 	@Resource(name="userBiz")
 	Biz<User,String> biz;

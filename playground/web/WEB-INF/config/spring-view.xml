@@ -26,6 +26,8 @@
  		<property name="order" value="0"/>
  	</bean>
  	
+ 	
+ 	
  	<!-- 다국어 처리 -->
  	<bean id="messageSource" 
  	class="org.springframework.context.support.ResourceBundleMessageSource">
