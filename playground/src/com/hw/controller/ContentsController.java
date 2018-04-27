@@ -5,12 +5,14 @@ import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
 import javax.imageio.ImageIO;
+import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -36,16 +38,17 @@ public class ContentsController {
 	@Resource(name="heartBiz")
 	Biz<Heart,String> biz2;
 	
-	@RequestMapping(value="mainView.do", produces = "application/text; charset=utf8",  method=RequestMethod.POST)
+	@RequestMapping(value="mainView.do", produces = "application/text; charset=utf8",  method=RequestMethod.GET)
 	@ResponseBody
 	public String mainView(@RequestParam(value = "page", defaultValue = "1") String page,Contents contents
 			/*,@RequestParam("lat") String lat,
 			@RequestParam("lon") String lon*/) throws IOException {
-		
+		contents.setLat("37.50139");
+		contents.setLon("127.0395");
 		System.out.println(contents.toString());
 		System.out.println(contents.getUidx()+": (uidx)mainView.do¡¢º” pagenum: "+page);
 		contents.setUidx(null);
-		contents.setDistance("0.5");
+		contents.setDistance("50");
 		/*if (contents.getDistance().equals("") || contents.getDistance()==null ) {
 			
 		}*/
@@ -72,6 +75,8 @@ public class ContentsController {
 			jo.put("cmt",contents.getCmt());
 			jr.add(jo);
 		}
+		
+		
 	    System.out.println(jr.toJSONString());
 	    return jr.toJSONString();
 	}
