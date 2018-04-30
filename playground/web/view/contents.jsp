@@ -61,7 +61,7 @@
      
      
      <div class="include">
-	     <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+	     <!-- <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
 	             <img src="/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
 	             <span class="w3-right w3-opacity">32 min</span>
 	             <h4 id="uidx"></h4><br>
@@ -70,7 +70,7 @@
 	             <p id="cmt"></p>
 	             <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
 	             <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-	     </div>
+	     </div> -->
     </div> 
      
     <!-- End Middle Column -->
@@ -92,16 +92,39 @@ $(document).ready(function () {
            url:'../mainView.do',
           success:function(data){
         	 var json = JSON.parse(data);
-             $('.include').find('#cmt').html("<h1>"+json[1].cmt+"</h1>");              
-             $('.include').find("img").attr("src","../img/"+json[1].pidx+".jpg");
-             $('.include').find('h4').html(json[1].uidx);
-             $('.include').find('p').html(json[1].cmt);
-             
-             
-            
-          
-          
-          
+        		 $('.include').html(
+                		 "<div class="+"'w3-container w3-card w3-white w3-round w3-margin'"+"><br>"+
+        	             "<img src="+"'/w3images/avatar6.png'"+" alt="+"'Avatar'"+ "class="+"'w3-left w3-circle w3-margin-right'"+ "style="+"'width:60px'>"+
+        	             "<span class="+"'w3-right w3-opacity'"+">32 min</span>"+
+        	             "<h4></h4><br>"+
+        	             "<hr class="+"'w3-clear'"+">"+
+        	             "<img style="+"'width:100%'"+ "class="+"'w3-margin-bottom'"+">"+
+        	             "<p></p>"+
+        	             "<button type="+"'button'"+ "class="+"'w3-button w3-theme-d1 w3-margin-bottom'"+"><i class="+"'fa fa-thumbs-up'"+"></i>  Like</button>"+
+        	             "<button type="+"'button'"+ "class="+"'w3-button w3-theme-d2 w3-margin-bottom'"+"><i class="+"'fa fa-comment'"+"></i>  Comment</button>"+ 
+        	     "</div>"+	 
+        	     
+        	             "<div class="+"'w3-container w3-card w3-white w3-round w3-margin'"+"><br>"+
+        	             "<img src="+"'/w3images/avatar6.png'"+" alt="+"'Avatar'"+ "class="+"'w3-left w3-circle w3-margin-right'"+ "style="+"'width:60px'>"+
+        	             "<span class="+"'w3-right w3-opacity'"+">32 min</span>"+
+        	             "<h4></h4><br>"+
+        	             "<hr class="+"'w3-clear'"+">"+
+        	             "<img style="+"'width:100%'"+ "class="+"'w3-margin-bottom'"+">"+
+        	             "<p></p>"+
+        	             "<button type="+"'button'"+ "class="+"'w3-button w3-theme-d1 w3-margin-bottom'"+"><i class="+"'fa fa-thumbs-up'"+"></i>  Like</button>"+
+        	             "<button type="+"'button'"+ "class="+"'w3-button w3-theme-d2 w3-margin-bottom'"+"><i class="+"'fa fa-comment'"+"></i>  Comment</button>"+ 
+        	     "</div>"
+                 )
+            	 
+            	 
+            	 
+          		 $('.include').find("img").attr("src","../img/"+json[1].pidx+".jpg");
+                 $('.include').find('h4').html(json[1].uidx);
+                 $('.include').find('p').html(json[1].cmt);
+
+        	 
+        	             
+         
           
           },
           error:function(){
